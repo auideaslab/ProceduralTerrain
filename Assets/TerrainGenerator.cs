@@ -17,6 +17,7 @@ public class TerrainGenerator : MonoBehaviour
             {
                 float x = j / (float) terrain.terrainData.heightmapWidth;
                 float y = i / (float) terrain.terrainData.heightmapHeight;
+
                 float height = Mathf.PerlinNoise(x, y);
                 heightmap[i, j] = height;
             }
