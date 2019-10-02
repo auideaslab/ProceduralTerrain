@@ -35,6 +35,9 @@ public class TerrainGenerator : MonoBehaviour
 
                 float x = j / (float)terrain.terrainData.heightmapWidth;
                 float y = i / (float)terrain.terrainData.heightmapHeight;
+
+                /*Reading a pixel in the picture at the position corresponding to the current position in the terrain and
+                 * uses its blue color component as height */
                 float height = image.GetPixel(i, j).b;
                 /* Perlin Noise version
                 float current_frequency = frequency
